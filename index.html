@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paiement</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Paiement</h1>
+    <form id="payment-form">
+      <label>Nom sur la carte</label>
+      <input type="text" placeholder="Jean Dupont" required />
+
+      <label>Numéro de carte</label>
+      <input type="text" placeholder="1234 5678 9012 3456" required maxlength="19"/>
+
+      <div class="flex">
+        <div>
+          <label>Date d’expiration</label>
+          <input type="text" placeholder="MM/AA" required />
+        </div>
+        <div>
+          <label>CVV</label>
+          <input type="text" placeholder="123" required maxlength="4"/>
+        </div>
+      </div>
+
+      <button type="submit">Payer</button>
+    </form>
+    <div id="confirmation" class="hidden">
+      ✅ Paiement effectué avec succès !
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
